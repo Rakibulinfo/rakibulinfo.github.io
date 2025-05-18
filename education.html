@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Page</title>
+    <style>
+        :root {
+            --dark-bg: #0f0f0f;
+            --darker-bg: #080808;
+            --accent: #2563eb;
+            --accent-light: #3b82f6;
+            --text: #f0f0f0;
+            --text-dim: #aaaaaa;
+            --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            --border: 1px solid #333;
+            --gradient: linear-gradient(135deg, var(--accent), var(--accent-light));
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .school-box {
+            background: var(--darker-bg);
+            border: var(--border);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+        }
+
+        .school-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--dark-bg);
+            color: var(--text);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .school-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .school-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            border: 3px solid var(--accent);
+        }
+
+        .school-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .school-name {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .school-name:hover {
+            color: var(--accent-light);
+        }
+
+        .school-details {
+            color: var(--text-dim);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-top: 16px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .school-details p {
+            margin: 12px 0;
+            padding: 0 12px;
+        }
+        
+        .school-details {
+            color: var(--text-color);
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        
+        .school-details p {
+            margin: 5px 0;
+        }
+
+        .view-certificate {
+            background-color: #4a90e2;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 12px;
+            display: inline-block;
+            transition: background-color 0.2s ease;
+        }
+
+        .view-certificate:hover {
+            background-color: #357abd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            margin-top: 20px;
+        }
+        
+        .education-link {
+            color: inherit;
+            text-decoration: none;
+        }
+        .education-link:hover {
+            color: #0000ff;
+            transition: color 0.3s ease;
+        }
+        .education-link:active {
+            color: #0000cc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Education Journey</h1>
+    </header>
+
+    <div class="container">
+        <div class="school-grid">
+            <!-- School Box 1 -->
+            <div class="school-box">
+                <div class="school-logo">
+                    <!-- Add your school logo here -->
+                    <img src="../assets/logo1.png" alt="Northern University Bangladesh Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <a href="https://nub.ac.bd/" class="school-name">Northern University Bangladesh (NUB)</a>
+                <div class="school-details">
+                    <p>Location: 111/2 Kawla Jamea Mosjid Road, Dakshin Khan (near international airport), Ashiyan City Rd, Dhaka 1230</p>
+                    <p><strong>Admission Date: 02 Mar' 2023</strong></p>
+                    <p><strong>Degree: B.Sc. (in Electrical And Electronic Engineering)</strong></p>
+                    <p><strong>Thesis Advisor: *********</strong></p>
+                    <p><strong>Duration: 2023 - Still Now</strong></p>
+                    <p><strong>CGPA: unknown</strong></p>
+                </div>
+                <a href="#" class="view-certificate">View Certificate</a>
+            </div>
+
+            <!-- School Box 2 -->
+            <div class="school-box">
+                <div class="school-logo">
+                    <!-- Add your school logo here -->
+                    <img src="../assets/logo2.png" alt="Moulvibazar Polytechnic Institute Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <a href="https://mpi.moulvibazar.gov.bd/" class="school-name">Moulvibazar Polytechnic Institute (MPI)</a>
+                <div class="school-details">
+                    <p>Address: FRJ7+FJM, Shamsher Nagar Road, Matarkapon, Moulvibazar</p>
+                    <p><strong>Admission Date: 31 July' 2017</strong></p>
+                    <p><strong>Diploma in Electronic Technology</strong></p>
+                    <p><strong>Thesis Advisor: Monju Miah</strong></p>
+                    <p><strong>End Of The Admission: 27 October' 2021</strong></p>
+                    <p><strong>CGPA: 86.2%</strong></p>
+                </div>
+                <a href="#" class="view-certificate">View Certificate</a>
+            </div>
+
+
+
+            <!-- School Box 3 -->
+            <div class="school-box">
+                <div class="school-logo">
+                    <!-- Add your school logo here -->
+                    <img src="../assets/logo3.png" alt="Salanga Islamia Multilateral High School Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <a href="https://www.sohopathi.com/salanga-islamia-high-school/" class="school-name">Salanga Islamia Multilateral High School</a>
+                <div class="school-details">
+                    <p>Location: Salanga Bazar, Roygonj, Sirajgonj</p>
+                    <p><strong>Admission Date: 01 Jan' 2015</strong></p>
+                    <p><strong>Trade: Building Maintenance -64</strong></p>
+                    <p><strong>End Of The Admission: 01 April' 2017</strong></p>
+                    <p><strong>CGPA: 92.5%</strong></p>
+                </div>
+                <a href="#" class="view-certificate">View Certificate</a>
+            </div>
+
+            <!-- School Box 4 -->
+            <div class="school-box">
+                <div class="school-logo">
+                    <!-- Add your school logo here -->
+                    <img src="../assets/logo4.png" alt="Ghurka Adarsha ML High School Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <a href="https://www.sohopathi.com/ghurka-adarsha-high-school/" class="school-name">Ghurka Adarsha ML High School</a>
+                <div class="school-details">
+                    <p>Location: Ghurka, Roygonj, Sirajgonj</p>
+                    <p><strong>Admission Date: 01 Jan' 2012</strong></p>
+                    <p><strong>Study for knowledge</strong></p>
+                    <p><strong>End Of The Admission: 31 Dec' 2014</strong></p>
+                    <p><strong>CGPA: 67.5%</strong></p>
+                </div>
+                <a href="#" class="view-certificate">View Certificate</a>
+            </div>
+
+            <!-- School Box 5 -->
+            <div class="school-box">
+                <div class="school-logo">
+                    <!-- Add your school logo here -->
+                    <img src="../assets/logo5.png" alt="Dadpur Govt Primary School Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <a href="https://school5.com" class="school-name">Dadpur Govt Primary School</a>
+                <div class="school-details">
+                    <p>Location: Dadpur, Sahebgonj, Roygonj, Sirajgonj</p>
+                    <p><strong>Admission Date: Unknown</strong></p>
+                    <p><strong>Study for Basic knowledge</strong></p>
+                    <p><strong>End Of The Admission: 15 Dec' 2011</strong></p>
+                    <p><strong>CGPA: 50.6%</strong></p>
+                </div>
+                <a href="#" class="view-certificate">View Certificate</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Education Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

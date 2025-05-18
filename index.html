@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Rakibul Islam | EEE Engineer | Professional Portfolio</title>
+    <style>
+        .warning-overlay {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 9998;
+            color: #333;
+            padding: 30px 40px;
+            opacity: 0;
+            transition: all 0.8s ease;
+            border: 2px solid #FFD700;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        .warning-overlay .warning-icon {
+            font-size: 48px;
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+        .warning-overlay .warning-text {
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 90%;
+        }
+        .warning-overlay.show {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+        
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 8px solid rgba(0, 116, 217, 0.1);
+            border-top: 8px solid #0074D9;
+            border-radius: 50%;
+            animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            box-shadow: 0 0 20px rgba(0, 116, 217, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+        .loading-name {
+            color: #0074D9;
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: spellOut 2s ease-in-out forwards;
+            z-index: 2;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spellOut {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            25% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            75% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta name="description" content="Professional portfolio of MD Rakibul Islam - Electrical & Electronics Engineer">
+    <meta name="keywords" content="EEE engineer, electrical engineer, electronics engineer, portfolio, professional">
+    <meta name="author" content="MD Rakibul Islam">
+</head>
+<body>
+    <div class="warning-overlay" id="warningOverlay">
+        <div class="warning-icon">⚠️</div>
+        <div class="warning-message">Warning: This is a test notification</div>
+        <div class="countdown" id="countdown">6</div>
+    </div>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-name">Rakib</div>
+    </div>
+    <!-- Floating Profile Picture -->
+    <div class="profile-float">
+        <img src="assets/profile.jpg" alt="MD Rakibul Islam">
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Rakibul Logo" class="logo-img">
+                <span class="logo-text">RAKIBUL</span>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://sites.google.com/view/rakibulinfo/home">MORE</a></li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        .logo-text {
+            font-weight: bold;
+            color: #0074D9;
+        }
+    </style>
+    
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content animate">
+                <h1>Hi, I'm <span>MD Rakibul Islam</span></h1>
+                <p class="typing-text">Electrical & Electronics Engineer | Junior Engineer at Smart Printing Solution Ltd.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="animate">About Me</h2>
+            <div class="grid">
+                <div class="box animate delay-1">
+                    <h3>Personal Details</h3>
+                    <ul class="personal-info">
+                        <li><strong>Father's Name:</strong> Md Rahmat Ali</li>
+                        <li><strong>Mother's Name:</strong> Mst. Rebeka Begum</li>
+                        <li><strong>Date of Birth:</strong> 08 May 2001</li>
+                        <li><strong>Nationality:</strong> Bangladeshi</li>
+                        <li><strong>Religion:</strong> Muslim</li>
+                        <li><strong>Blood Group:</strong> O+ (ve)</li>
+                        <li><strong>Address:</strong> H #2, Ledu Mollah Road, Tongi, Gazipur</li>
+                    </ul>
+                </div>
+                <div class="box animate delay-2">
+                    <h3>Interests</h3>
+                    <ul>
+                        <li>SMART Devices</li>
+                        <li>Cricket & Football</li>
+                        <li>Traveling & Tourism</li>
+                    </ul>
+                    <h3 style="margin-top: 20px;">Languages</h3>
+                    <ul>
+                        <li>English - Professional Proficiency</li>
+                        <li>Bangla - Native Proficiency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="animate"><a href="education.html" class="education-link">Education</a> <span style="color: blue; font-size: 20px;"><a href="education.html" style="color: inherit;">More</a></span></h2>
+            <div class="box animate delay-1">
+                <h3>B.Sc. in Electrical & Electronics Engineering (EEE)</h3>
+                <p>Northern University Bangladesh</p>
+                <p>February 2023 – Present</p>
+            </div>
+            <div class="box animate delay-2">
+                <h3>Diploma in Electronics Engineering</h3>
+                <p>Moulvibazar Polytechnic Institute</p>
+                <p>CGPA: 3.44/4 | 2021</p>
+            </div>
+            <div class="box animate delay-3">
+                <h3>Secondary School Certificate (SSC)</h3>
+                <p>Salanga Islamia High School</p>
+                <p>GPA: 4.61/5 | 2017</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="animate">Skills</h2>
+            <div class="box animate delay-1">
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Electronics Work</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Electrical Projects</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>IT Related Work</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Team Collaboration</span>
+                            <span>97%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 96%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="animate">Experience</h2>
+            <div class="box animate delay-1">
+                <h3>Junior Engineer</h3>
+                <p>Smart Printing Solution Ltd. | December 2021 – Present</p>
+                <ul style="margin-top: 15px;">
+                    <li>Provide technical support to customers on-site and remotely</li>
+                    <li>Installation, maintenance, repair, and troubleshooting</li>
+                    <li>Collaborate with sales team to resolve customer issues</li>
+                    <li>Perform preventative maintenance on company products</li>
+                </ul>
+            </div>
+            <div class="box animate delay-2">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>1st Award: Monthly Best Emerging Engineer (October 2022)</li>
+                    <li>2nd Award: Best Performance Award 2024</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="animate">Contact Me</h2>
+            <div class="grid">
+                <div class="box animate delay-1">
+                    <h3>Contact Information</h3>
+                    <ul class="personal-info">
+                        <li><strong>Phone:</strong> +8801771396915</li>
+                        <li><strong>Email:</strong> Rakibulislam935773@gmail.com</li>
+                        <li><strong>Website:</strong> Sites.google.com/view/rakibulinfo</li>
+                        <li><strong>Address:</strong> H #2, Ledu Mollah Road, Tongi, Gazipur</li>
+                    </ul>
+                </div>
+                <div class="box animate delay-2">
+                    <h3>Send a Message</h3>
+                    <form action="https://formsubmit.co/rakibulislam935773@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://rakibulinfo.github.io/thank-you.html">
+                        <input type="hidden" name="_subject" value="New message from your portfolio">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show loading overlay
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.style.opacity = '1';
+            
+            // Hide loading overlay after 2 seconds
+            setTimeout(() => {
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+                
+                // Show warning message
+                const warningOverlay = document.createElement('div');
+                warningOverlay.className = 'warning-overlay';
+                warningOverlay.innerHTML = `
+                    <div class="warning-icon">⚠️</div>
+                    <div class="warning-text">
+                        <strong>System Update Notice</strong><br><br>
+                        The website is currently undergoing maintenance and updates.<br>
+                        Some features may temporarily be unavailable.<br>
+                        We apologize for any inconvenience this may cause.<br>
+                        Thank you for your understanding.
+                    </div>
+                `;
+                document.body.appendChild(warningOverlay);
+                warningOverlay.classList.add('show');
+                
+                // Hide warning message after 8 seconds
+                setTimeout(() => {
+                    warningOverlay.classList.remove('show');
+                    setTimeout(() => {
+                        warningOverlay.remove();
+                    }, 500);
+                }, 8000);
+            }, 2000);
+        });
+    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <p class="copyright">
+                    &copy; 2024 MD Rakibul Islam. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Remove loading overlay after 2 seconds
+        setTimeout(() => {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.style.display = 'none';
+        }, 500);
+
+        // Warning notification function
+        function showWarning() {
+            const warningOverlay = document.getElementById('warningOverlay');
+            warningOverlay.style.opacity = '1';
+            
+            // Start countdown timer
+            let timeLeft = 6;
+            const countdownElement = document.getElementById('countdown');
+            const countdownInterval = setInterval(() => {
+                countdownElement.textContent = timeLeft;
+                timeLeft--;
+                
+                if (timeLeft < 0) {
+                    clearInterval(countdownInterval);
+                    warningOverlay.style.opacity = '0';
+                }
+            }, 1000);
+        }
+
+        // Show warning after loading animation
+        window.onload = () => {
+            setTimeout(showWarning, 2000);
+        };
+    </script>
+<script src="js/main.js"></script>
+</body>
+</html>
