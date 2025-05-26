@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Rakibul Islam | EEE Engineer | Professional Portfolio</title>
+    <style>
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 8px solid rgba(0, 116, 217, 0.1);
+            border-top: 8px solid #0074D9;
+            border-radius: 50%;
+            animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            box-shadow: 0 0 20px rgba(0, 116, 217, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+        .loading-name {
+            color: #0074D9;
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: spellOut 2s ease-in-out forwards;
+            z-index: 2;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spellOut {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            25% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            75% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta name="description" content="Professional portfolio of MD Rakibul Islam - Electrical & Electronics Engineer">
+    <meta name="keywords" content="EEE engineer, electrical engineer, electronics engineer, portfolio, professional">
+    <meta name="author" content="MD Rakibul Islam">
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-name">Rakib</div>
+    </div>
+    <!-- Floating Profile Picture -->
+    <div class="profile-float">
+        <img src="assets/profile.jpg" alt="MD Rakibul Islam">
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Rakibul Logo" class="logo-img">
+                <span class="logo-text">RAKIBUL</span>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://sites.google.com/view/rakibulinfo/home">MORE</a></li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        .logo-text {
+            font-weight: bold;
+            color: #0074D9;
+        }
+        /* Add hover effect for Skills link */
+        .nav-links li a[href="#skills"] {
+            color: white !important;
+            transition: color 0.3s ease;
+            background: none !important;
+        }
+        .nav-links li a[href="#skills"]:hover {
+            color: #0074D9 !important;
+        }
+    </style>
+    
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content animate">
+                <h1>Hi, I'm <span>MD Rakibul Islam</span></h1>
+                <p class="typing-text">Electrical & Electronics Engineer | Junior Engineer at Smart Printing Solution Ltd.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="animate">About Me</h2>
+            <div class="grid">
+                <div class="box animate delay-1">
+                    <h3>Personal Details</h3>
+                    <ul class="personal-info">
+                        <li><strong>Father's Name:</strong> Md Rahmat Ali</li>
+                        <li><strong>Mother's Name:</strong> Mst. Rebeka Begum</li>
+                        <li><strong>Date of Birth:</strong> 08 May 2001</li>
+                        <li><strong>Nationality:</strong> Bangladeshi</li>
+                        <li><strong>Religion:</strong> Muslim</li>
+                        <li><strong>Blood Group:</strong> O+ (ve)</li>
+                        <li><strong>Address:</strong> H #2, Ledu Mollah Road, Tongi, Gazipur</li>
+                    </ul>
+                </div>
+                <div class="box animate delay-2">
+                    <h3>Interests</h3>
+                    <ul>
+                        <li>SMART Devices</li>
+                        <li>Cricket & Football</li>
+                        <li>Traveling & Tourism</li>
+                    </ul>
+                    <h3 style="margin-top: 20px;">Languages</h3>
+                    <ul>
+                        <li>English - Professional Proficiency</li>
+                        <li>Bangla - Native Proficiency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="animate"><a href="education.html" class="education-link">Education</a> <span style="color: blue; font-size: 20px;"><a href="education.html" style="color: inherit;">More</a></span></h2>
+            <div class="box animate delay-1">
+                <h3>B.Sc. in Electrical & Electronics Engineering (EEE)</h3>
+                <p>Northern University Bangladesh</p>
+                <p>February 2023 – Present</p>
+            </div>
+            <div class="box animate delay-2">
+                <h3>Diploma in Electronics Engineering</h3>
+                <p>Moulvibazar Polytechnic Institute</p>
+                <p>CGPA: 3.44/4 | 2021</p>
+            </div>
+            <div class="box animate delay-3">
+                <h3>Secondary School Certificate (SSC)</h3>
+                <p>Salanga Islamia High School</p>
+                <p>GPA: 4.61/5 | 2017</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="animate"><a href="skills.html" class="skills-link" style="color: white; text-decoration: none;">Skills</a> <span style="color: blue; font-size: 20px;"><a href="skills.html" class="more-link" style="color: inherit;">More</a></span></h2>
+            <style>
+                .skills-link {
+                    color: white !important;
+                    transition: color 0.3s ease;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+                .skills-link:hover {
+                    color: #041bc7 !important;
+                }
+                .more-link {
+                    color: blue !important;
+                    text-decoration: underline;
+                    text-decoration-color: #041bc7;
+                    text-decoration-thickness: 2px;
+                }
+            </style>
+            <div class="box animate delay-1">
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Electronics Work</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Electrical Projects</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>IT Related Work</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Team Collaboration</span>
+                            <span>97%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 96%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="animate">Experience</h2>
+            <div class="box animate delay-1">
+                <h3>Junior Engineer</h3>
+                <p>Smart Printing Solution Ltd. | December 2021 – Present</p>
+                <ul style="margin-top: 15px;">
+                    <li>Provide technical support to customers on-site and remotely</li>
+                    <li>Installation, maintenance, repair, and troubleshooting</li>
+                    <li>Collaborate with sales team to resolve customer issues</li>
+                    <li>Perform preventative maintenance on company products</li>
+                </ul>
+            </div>
+            <div class="box animate delay-2">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>1st Award: Monthly Best Emerging Engineer (October 2022)</li>
+                    <li>2nd Award: Best Performance Award 2024</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="animate">Contact Me</h2>
+            <div class="grid">
+                <div class="box animate delay-1">
+                    <h3>Contact Information</h3>
+                    <ul class="personal-info">
+                        <li><strong>Phone:</strong> <a href="https://wa.me/8801771396915" target="_blank">+8801771396915</a></li>
+                        <li><strong>Email:</strong> Rakibulislam935773@gmail.com</li>
+                        <li><strong>Website:</strong> Sites.google.com/view/rakibulinfo</li>
+                        <li><strong>Address:</strong> H #2, Ledu Mollah Road, Tongi, Gazipur</li>
+                    </ul>
+                </div>
+                <div class="box animate delay-2">
+                    <h3>Send a Message</h3>
+                    <form action="https://formsubmit.co/rakibulislam935773@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://rakibulinfo.github.io/thank-you.html">
+                        <input type="hidden" name="_subject" value="New message from your portfolio">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/md.rakibul.islam.976864" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://nolink" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://rakibulinfo.github.io/" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/8801771396915" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:rakibulislam935773@gmail.com" target="_blank" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p class="copyright">
+                    &copy; 2024 MD Rakibul Islam. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Remove loading overlay after 2 seconds
+        setTimeout(() => {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.style.opacity = '0';
+            setTimeout(() => {
+                loadingOverlay.style.display = 'none';
+            }, 500);
+        }, 2000);
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
